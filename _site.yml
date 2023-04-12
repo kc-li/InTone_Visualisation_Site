@@ -1,0 +1,12 @@
+name: "InTone_Visualisation_Site"
+output_dir: "docs"
+navbar:
+  title: "InTone Prosody Visulisation"
+  left:
+  - text: "Home"
+    href: index.html
+  - text: "Prosody Visualisation"
+    href: PVC_visulisation.html
+output:
+  html_document:
+    theme: cosmo
