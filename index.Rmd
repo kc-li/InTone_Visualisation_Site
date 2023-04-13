@@ -1,5 +1,8 @@
 ---
-title: "index"
+title: "InTone (Prosodic Visulaisation Challenge)"
 output: html_document
 date: "2023-04-12"
+author: Katrina Kechun Li
 ---
+
+This website is accompany the submitted paper for ICPhS special session: Disentangling Intonation in Tone languages.

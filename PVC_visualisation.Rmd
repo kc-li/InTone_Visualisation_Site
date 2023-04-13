@@ -1,17 +1,13 @@
 ---
-title: "Data visualising"
+title: "Visualisation in R"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r packages}
-library(readr)
-library(dplyr)
-library(stringr)
+```{r packages, message=FALSE, warning=FALSE}
 library(ggplot2)
-library(tidyr)
 ```
 
 

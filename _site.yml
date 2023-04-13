@@ -1,11 +1,11 @@
 name: "InTone_Visualisation_Site"
 output_dir: "docs"
 navbar:
-  title: "InTone Prosody Visulisation"
+  title: "InTone (Prosody Visulisation Challenge)"
   left:
   - text: "Home"
     href: index.html
-  - text: "Prosody Visualisation"
+  - text: "Visulisation in R"
     href: PVC_visulisation.html
 output:
   html_document:
