@@ -1,7 +1,7 @@
 name: "InTone_Visualisation_Site"
 output_dir: "docs"
 navbar:
-  title: "InTone (Prosody Visulisation Challenge)"
+  title: "InTone"
   left:
   - text: "Home"
     href: index.html
