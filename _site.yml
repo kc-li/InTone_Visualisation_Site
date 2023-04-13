@@ -5,8 +5,8 @@ navbar:
   left:
   - text: "Home"
     href: index.html
-  - text: "Visulisation in R"
-    href: PVC_visulisation.html
+  - text: "Visualisation in R"
+    href: PVC_visualisation.html
 output:
   html_document:
     theme: cosmo
