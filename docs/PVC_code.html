@@ -11,7 +11,7 @@
 
 
 
-<title>Functions used in R</title>
+<title>Data processing pipeline</title>
 
 <script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -251,10 +251,10 @@ $(document).ready(function () {
   <a href="Recordings_Chengdu.html">Chengdu</a>
 </li>
 <li>
-  <a href="Recordings_Chengdu.html">Changsha</a>
+  <a href="Recordings_Changsha.html">Changsha</a>
 </li>
 <li>
-  <a href="PVC_visualisation.html">R code</a>
+  <a href="PVC_code.html">Processing code</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -268,7 +268,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Functions used in R</h1>
+<h1 class="title toc-ignore">Data processing pipeline</h1>
 
 </div>
 
@@ -280,6 +280,7 @@ library(tidyr)
 library(kableExtra)</code></pre>
 <div id="data-cleaning" class="section level2">
 <h2>Data cleaning</h2>
+<p>A basic data clearning function, to derive necessary variables.</p>
 <pre class="r"><code>data.clean &lt;- function(dataframe){
   dataframe &lt;- dataframe %&gt;%
     mutate(
@@ -294,9 +295,8 @@ library(kableExtra)</code></pre>
     participant = as.factor(participant)
   )
 }</code></pre>
-<p>Data manipulation, use a sample of data as an example</p>
-<p>The initial data, after applying the cleaning function, is as below
-(first 200 rows are shown)</p>
+<p>The initial data, after applying the cleaning function, is shown
+below (first 200 rows are shown).</p>
 <pre class="r"><code>changsha.raw &lt;- read_tsv(&quot;./data/Changsha_data.tsv&quot;, col_names = TRUE,show_col_types = FALSE)
 changsha.clean &lt;- data.clean(changsha.raw)
 
@@ -23630,11 +23630,9 @@ S22
 </tbody>
 </table>
 </div>
-<p>We then did further data transformations to</p>
-<ul>
-<li>convert f0 to semitone scale</li>
-<li>calculate the f0 difference at each normalised time points</li>
-</ul>
+<p>We then did several data transformations to convert f0 to semitone
+scale and calculate the f0 difference at each normalised time
+points.</p>
 <pre class="r"><code># Add a new variable for the last word in the sentence
 changsha.clean &lt;- changsha.clean %&gt;%
   group_by(filename) %&gt;%
@@ -23672,7 +23670,7 @@ changsha.long &lt;- changsha.wide %&gt;%
       values_to = &quot;F0_semi&quot;
     )
 
-# Prepare the data for plotting
+# For plotting, we need to revert back to long format again
 changsha.long.sen &lt;- changsha.long %&gt;%
   filter(idx ==1 | idx == 2 | idx ==3 | idx ==4 |idx ==5 |idx == 6 | idx == 7) %&gt;%
   mutate(
