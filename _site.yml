@@ -8,7 +8,7 @@ navbar:
   - text: "Chengdu"
     href: "Recordings_Chengdu.html"
   - text: "Changsha"
-    href: "Recordings_Chengdu.html"
+    href: "Recordings_Changsha.html"
   - text: "Processing code"
     href: PVC_code.html
 output:
