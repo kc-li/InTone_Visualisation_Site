@@ -5,8 +5,12 @@ navbar:
   left:
   - text: "Home"
     href: index.html
-  - text: "Visualisation in R"
-    href: PVC_visualisation.html
+  - text: "Chengdu"
+    href: "Recordings_Chengdu.html"
+  - text: "Changsha"
+    href: "Recordings_Chengdu.html"
+  - text: "Processing code"
+    href: PVC_code.html
 output:
   html_document:
     theme: cosmo
