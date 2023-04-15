@@ -1,8 +1,21 @@
 ---
-title: "InTone (Prosodic Visulaisation Challenge)"
+title: "InTone: Disentangling Intonation in Tone languages"
 output: html_document
-date: "2023-04-12"
-author: Katrina Kechun Li
 ---
+<style type="text/css">
+  body{
+  font-size: 13pt;
+  p {line-height: 2em;}
+}
+</style>
 
-This website provides the accompany examples for the submitted paper for ICPhS special session: Disentangling Intonation in Tone languages.
+\
+
+This website provides the accompany examples for the submitted paper for ICPhS special session: Prosody Visualisation Challenge.
+
+> The question has often been raised as to how Chinese can have sentence intonation if words have definite tones. The best answer is to compare syllabic tone and sentence intonation with small ripples riding on large waves (though occasionally the ripples may be 'larger' than the waves). The actual result is an algebraic sum of the two kinds of waves.
+>
+>`r tufte::quote_footer('--- Yuen Ren Chao, 1968, *A grammar of spoken Chinese*, p.39')`
+
+
+
