@@ -99,6 +99,8 @@ chengdu.diff.figure <- chengdu.long.sen %>%
   filter(FocusCon == "F2_5")
 ```
 
+\
+
 ## T1
 :::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
 ::: {}
@@ -135,6 +137,8 @@ diffplot(subset(chengdu.diff.figure, tone == "T1"))
 :::
 ::::
 
+\
+
 ## T2
 :::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
 ::: {}
@@ -169,6 +173,8 @@ diffplot(subset(chengdu.diff.figure, tone == "T2"))
 
 :::
 ::::
+
+\
 
 ## T3
 :::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
@@ -206,6 +212,8 @@ diffplot(subset(chengdu.diff.figure, tone == "T3"))
 :::
 ::::
 
+\
+
 ## T4
 :::: {style="display: grid; grid-template-columns: 1fr 1fr; grid-column-gap: 10px;"}
 ::: {}
@@ -241,6 +249,7 @@ diffplot(subset(chengdu.diff.figure, tone == "T4"))
 :::
 ::::
 
+\
 
 ## Chengdu combined
 
