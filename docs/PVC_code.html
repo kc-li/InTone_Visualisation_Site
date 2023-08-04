@@ -13,7 +13,7 @@
 
 <title>Data processing pipeline</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -273,6 +273,8 @@ $(document).ready(function () {
 </div>
 
 
+<p>This page provides the code that has been used in data processing and
+generating the figures.</p>
 <pre class="r"><code>library(readr)
 library(stringr)
 library(dplyr)
@@ -31356,7 +31358,7 @@ rawplot &lt;- function(data){
     scale_color_manual(name = &quot;Focus condition&quot;,
                        breaks = c(&quot;F2&quot;,&quot;F5&quot;),
                        labels = c(&quot;Subject focus&quot;,&quot;Object focus&quot;),
-                       values = c( &quot;#56B4E9&quot;,&quot;#E69F00&quot;)) +
+                       values = c(&quot;#6a4cb5&quot;,&quot;#E69F00&quot;)) +
     scale_linetype_manual(name = &quot;Focus condition&quot;,
                        breaks = c(&quot;F2&quot;,&quot;F5&quot;),
                        labels = c(&quot;Subject focus&quot;,&quot;Object focus&quot;),
@@ -31377,13 +31379,17 @@ rawplot &lt;- function(data){
         strip.text = element_text(size = 15))
 }
 diffplot &lt;- function(data){
+    data_average &lt;- data %&gt;%
+    group_by(FocusCon, tone, case,Time) %&gt;%
+    summarise(F0_semi = mean(F0_semi))
   ggplot(data, aes(x = Time, y = F0_semi, group = FocusCon,color = FocusCon)) +
-  geom_hline(yintercept = 0,color = &quot;red&quot;) + 
+  geom_hline(yintercept = 0,color = &quot;#000000&quot;) + 
     stat_summary(fun = mean, geom = &quot;smooth&quot;) +
+    geom_area(data = subset(data_average), fill = &quot;#C54e4f&quot;, alpha=0.6) +
   scale_color_manual(name = &quot;Focus condition&quot;,
                        breaks = c(&quot;F2_5&quot;),
                        labels = c( &quot;Suibject-Object&quot;),
-                       values = c(&quot;#000000&quot;)) +
+                       values = c(&quot;#C54e4f&quot;)) +
     facet_grid(tone~case,labeller = labeller(case = case.labs)) + 
     scale_linetype_manual(name = &quot;Focus condition&quot;,
                        breaks = c(&quot;F2_5&quot;),
