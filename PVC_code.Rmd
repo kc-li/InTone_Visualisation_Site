@@ -2,6 +2,8 @@
 title: "Data processing pipeline"
 ---
 
+This page provides the code that has been used in data processing and generating the figures.
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -126,7 +128,7 @@ rawplot <- function(data){
     scale_color_manual(name = "Focus condition",
                        breaks = c("F2","F5"),
                        labels = c("Subject focus","Object focus"),
-                       values = c( "#56B4E9","#E69F00")) +
+                       values = c("#6a4cb5","#E69F00")) +
     scale_linetype_manual(name = "Focus condition",
                        breaks = c("F2","F5"),
                        labels = c("Subject focus","Object focus"),
@@ -147,13 +149,17 @@ rawplot <- function(data){
         strip.text = element_text(size = 15))
 }
 diffplot <- function(data){
+    data_average <- data %>%
+    group_by(FocusCon, tone, case,Time) %>%
+    summarise(F0_semi = mean(F0_semi))
   ggplot(data, aes(x = Time, y = F0_semi, group = FocusCon,color = FocusCon)) +
-  geom_hline(yintercept = 0,color = "red") + 
+  geom_hline(yintercept = 0,color = "#000000") + 
     stat_summary(fun = mean, geom = "smooth") +
+    geom_area(data = subset(data_average), fill = "#C54e4f", alpha=0.6) +
   scale_color_manual(name = "Focus condition",
                        breaks = c("F2_5"),
                        labels = c( "Suibject-Object"),
-                       values = c("#000000")) +
+                       values = c("#C54e4f")) +
     facet_grid(tone~case,labeller = labeller(case = case.labs)) + 
     scale_linetype_manual(name = "Focus condition",
                        breaks = c("F2_5"),
