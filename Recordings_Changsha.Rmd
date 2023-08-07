@@ -23,7 +23,7 @@ html_tag_audio <- function(file,
 ```
 
 ```{r visualisation functions, include=FALSE}
-case.labs <- c("Prefex", "Name", "Verb", "Aspect","Classfier","Object","Suffix")
+case.labs <- c("Prefix", "Name", "Verb", "Aspect","Classfier","Object","Suffix")
 names(case.labs) <- c("Name(prefix)","Name","Verb","Aspect", "Classifier", "Object","Object(suffix)")
 rawplot <- function(data){
     ggplot(data, aes(x = Time, y = F0_semi, group = FocusCon,color = FocusCon, linetype = FocusCon, linewidth = underfocus)) +
@@ -117,7 +117,7 @@ gloss_example(transliteration = "ɕiaʊ42 **jɪŋ34** **kʰai34** ta21 tsa34 **i
 ```
 :::
 :::{}
-Subject focus (blue line)        `r html_tag_audio("Audiofiles_wav/Changsha-T1-Subj.wav")`
+Subject focus (Purple line)        `r html_tag_audio("Audiofiles_wav/Changsha-T1-Subj.wav")`
 
 Object focus (orange line)     `r html_tag_audio("Audiofiles_wav/Changsha-T1-Obj.wav")`
 :::
@@ -155,7 +155,7 @@ gloss_example(transliteration = "ɕiaʊ42 **jɪŋ13** **tia13** ta21 tsa34	**lan
 ```
 :::
 :::{}
-Subject focus (blue line)        `r html_tag_audio("Audiofiles_wav/Changsha-T2-Subj.wav")`
+Subject focus (purple line)        `r html_tag_audio("Audiofiles_wav/Changsha-T2-Subj.wav")`
 
 Object focus (orange line)     `r html_tag_audio("Audiofiles_wav/Changsha-T2-Obj.wav")`
 :::
@@ -194,7 +194,7 @@ gloss_example(transliteration = "ɕiaʊ42 **jɪŋ42** **mɑi42** tɑ21 tsɑ34 **
 ```
 :::
 :::{}
-Subject focus (blue line)        `r html_tag_audio("Audiofiles_wav/Changsha-T3-Subj.wav")`
+Subject focus (purple line)        `r html_tag_audio("Audiofiles_wav/Changsha-T3-Subj.wav")`
 
 Object focus (orange line)     `r html_tag_audio("Audiofiles_wav/Changsha-T3-Obj.wav")`
 :::
@@ -232,7 +232,7 @@ gloss_example(transliteration = "ɕiaʊ42 **jɪŋ45** **mɑi45** tɑ21 tsɑ34 **
 ```
 :::
 :::{}
-Subject focus (blue line)        `r html_tag_audio("Audiofiles_wav/Changsha-T4-Subj.wav")`
+Subject focus (purple line)        `r html_tag_audio("Audiofiles_wav/Changsha-T4-Subj.wav")`
 
 Object focus (orange line)     `r html_tag_audio("Audiofiles_wav/Changsha-T4-Obj.wav")`
 :::

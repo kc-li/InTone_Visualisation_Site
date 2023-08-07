@@ -27,6 +27,8 @@ Taking inspiration from Chao's fascinating insights, we have developed a new app
 
 By simply subtracting the f0 contour of the same sentence from another, we can potentially neutralize the tonal effects, allowing the true differences in intonation to emerge more clearly.
 
+Listen to the sound demos accompanied by the visualisations by navigating between the tabs on the top!
+
 \
 
 ![](wavedemo.png)
