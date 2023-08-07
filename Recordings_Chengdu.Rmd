@@ -23,7 +23,7 @@ html_tag_audio <- function(file,
 ```
 
 ```{r visualisation functions, include=FALSE}
-case.labs <- c("Prefex", "Name", "Verb", "Aspect","Classfier","Object","Suffix")
+case.labs <- c("Prefix", "Name", "Verb", "Aspect","Classfier","Object","Suffix")
 names(case.labs) <- c("Name(prefix)","Name","Verb","Aspect", "Classifier", "Object","Object(suffix)")
 rawplot <- function(data){
     ggplot(data, aes(x = Time, y = F0_semi, group = FocusCon,color = FocusCon, linetype = FocusCon, linewidth = underfocus)) +
@@ -116,7 +116,7 @@ gloss_example(transliteration = "ɕiaʊ53 **jɪər35** **niɛ35** lə0 kə23 **s
 ```
 :::
 :::{}
-Subject focus (blue line)        `r html_tag_audio("Audiofiles_wav/Chengdu-T1-Subj.wav")`
+Subject focus (purple line)        `r html_tag_audio("Audiofiles_wav/Chengdu-T1-Subj.wav")`
 
 Object focus (orange line)     `r html_tag_audio("Audiofiles_wav/Chengdu-T1-Obj.wav")`
 :::
@@ -155,7 +155,7 @@ gloss_example(transliteration = "ɕiaʊ53 **jɪn31** **na31** lə0 kə23 **læ31
 :::
 
 ::: {}
-Subject focus (blue line)       `r html_tag_audio("Audiofiles_wav/Chengdu-T2-Subj.wav")`
+Subject focus (purple line)       `r html_tag_audio("Audiofiles_wav/Chengdu-T2-Subj.wav")`
 
 Object focus (orange line)     `r html_tag_audio("Audiofiles_wav/Chengdu-T2-Obj.wav")`
 :::
@@ -192,7 +192,7 @@ gloss_example(transliteration = "ɕiaʊ53 **jɪn53** **mai53** lə0 pa53 **ji53*
 :::
 
 ::: {}
-Subject focus (blue line)       `r html_tag_audio("Audiofiles_wav/Chengdu-T3-Subj.wav")`
+Subject focus (purple line)       `r html_tag_audio("Audiofiles_wav/Chengdu-T3-Subj.wav")`
 
 
 Object focus (orange line)      `r html_tag_audio("Audiofiles_wav/Chengdu-T3-Obj.wav")`
@@ -230,7 +230,7 @@ gloss_example(transliteration = "ɕiaʊ53 **jɪn23** **mai23** lə0 suaŋ35 **ua
 :::
 
 ::: {}
-Subject focus (blue line)      `r html_tag_audio("Audiofiles_wav/Chengdu-T4-Subj.wav")`
+Subject focus (purple line)      `r html_tag_audio("Audiofiles_wav/Chengdu-T4-Subj.wav")`
 
 Object focus (orange line)       `r html_tag_audio("Audiofiles_wav/Chengdu-T4-Obj.wav")`
 :::
