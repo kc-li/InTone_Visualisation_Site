@@ -135,7 +135,7 @@ rawplot(subset(changsha.raw.figure, tone == "T1"))
 
 ::: {}
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 diffplot(subset(changsha.diff.figure, tone == "T1"))
 ```
 
@@ -173,7 +173,7 @@ rawplot(subset(changsha.raw.figure, tone == "T2"))
 
 ::: {}
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 diffplot(subset(changsha.diff.figure, tone == "T2"))
 ```
 
@@ -211,7 +211,7 @@ rawplot(subset(changsha.raw.figure, tone == "T3"))
 
 ::: {}
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 diffplot(subset(changsha.diff.figure, tone == "T3"))
 ```
 
@@ -250,7 +250,7 @@ rawplot(subset(changsha.raw.figure, tone == "T4"))
 
 ::: {}
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 diffplot(subset(changsha.diff.figure, tone == "T4"))
 ```
 
@@ -263,7 +263,7 @@ diffplot(subset(changsha.diff.figure, tone == "T4"))
 
 The above four figures are combined with the same f0 range on y-axis.
 
-```{r include=FALSE}
+```{r message=FALSE, warning=FALSE, include=FALSE}
 remove_y <- theme(
   axis.title.y = element_blank()
   # axis.ticks.y = element_blank(),
