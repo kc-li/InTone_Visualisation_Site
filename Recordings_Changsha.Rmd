@@ -22,7 +22,7 @@ html_tag_audio <- function(file,
 # source: https://community.rstudio.com/t/audio-files-in-r-markdown/20874/4
 ```
 
-```{r visualisation functions, include=FALSE}
+```{r visualisation functions, message=FALSE, warning=FALSE, include=FALSE}
 case.labs <- c("Prefix", "Name", "Verb", "Aspect","Classfier","Object","Suffix")
 names(case.labs) <- c("Name(prefix)","Name","Verb","Aspect", "Classifier", "Object","Object(suffix)")
 rawplot <- function(data){
